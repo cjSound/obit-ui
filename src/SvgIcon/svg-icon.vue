@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 14:07:19
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-02-26 15:21:47
+ * @LastEditTime: 2020-02-27 00:49:55
  * @Description: file content
  -->
 <template>
@@ -14,6 +14,7 @@
 <script>
 // doc: https://panjiachen.github.io/vue-element-admin-site/feature/component/svg-icon.html#usage
 import './../icons/index'
+// import './../icons/svg/nodata.svg'
 export default {
   name: 'SvgIcon',
   props: {

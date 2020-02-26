@@ -2,20 +2,21 @@
  * @Author: 曹捷
  * @Date: 2019-08-01 14:24:32
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-02-26 14:53:14
+ * @LastEditTime: 2020-02-27 02:04:08
  * @Description: file content
  */
 const path = require('path')
 
 
 function resolve(dir) {
+  console.log(9999999999, __dirname)
   return path.join(__dirname, dir)
 }
+console.log(222)
 module.exports = {
   // 静态资源目录 (js, css, img, fonts)
   assetsDir: 'assets',
   // 是否开启eslint保存检测，有效值：ture | false | 'error'
-
   chainWebpack(config) {
     // set svg-sprite-loader
     config.module

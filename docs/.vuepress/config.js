@@ -2,13 +2,17 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 11:45:28
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-02-26 20:57:38
+ * @LastEditTime: 2020-02-27 02:07:44
  * @Description: file content
  */
 const path = require('path')
+
+function resolve(dir) {
+  return path.join(__dirname, '../../' + dir)
+}
 module.exports = {
   base: '/obit-ui/',
-  title: 'Obit UI',
+  title: 'Onebit',
   description: '易比特前端组件库',
   head: [
     ['link', {
@@ -17,18 +21,19 @@ module.exports = {
     }]
   ],
   themeConfig: {
+    logo: '/favicon.ico',
     nav: [{
         text: 'Home',
         link: '/'
       },
       {
         text: 'Github',
-        link: 'https://github.com/Firenzia/sakura-ui/'
+        link: 'https://github.com/cjSound/obit-ui/'
       },
     ],
     sidebar: [{
         title: '开发指南',
-        collapsable: true,
+        collapsable: false,
         children: [
           'views/guide/install.md',
           'views/guide/get-started.md'
@@ -36,9 +41,11 @@ module.exports = {
       },
       {
         title: '组件',
-        collapsable: true,
+        collapsable: false,
         children: [
-          'views/components/content-form.md'
+          'views/components/content-form.md',
+          'views/components/nodata.md'
+
 
         ]
       },
@@ -46,5 +53,23 @@ module.exports = {
   },
   scss: { //配置 scss 根目录
     includePaths: [path.join(__dirname, '../../style')]
+  },
+  chainWebpack: (config, isServer) => {
+    // config 是 ChainableConfig 的一个实例
+    config.module
+      .rule('svg')
+      .exclude.add(resolve('src/icons'))
+      .end()
+    config.module
+      .rule('icons')
+      .test(/\.svg$/)
+      .include.add(resolve('src/icons'))
+      .end()
+      .use('svg-sprite-loader')
+      .loader('svg-sprite-loader')
+      .options({
+        symbolId: 'icon-[name]'
+      })
+      .end()
   }
 }
