@@ -25,5 +25,5 @@ export default {
 
 ```
 <ClientOnly>
-  <sakura-gif/>
+  <obit-gif/>
 </ClientOnly>

@@ -1,0 +1,65 @@
+@for $i from 1 through 24 {
+  [sizew="#{$i}"] {
+    width: (100% * (($i /24)-0.01));
+  }
+}
+
+@for $i from 0 through 12 {
+  .p-t-#{$i*5} {
+    padding-top: (0px + $i*5) !important;
+  }
+
+  .m-t-#{$i*5} {
+    margin-top: (0px + $i*5) !important;
+  }
+
+  .p-l-#{$i*5} {
+    padding-left: (0px + $i*5) !important;
+  }
+
+  .m-l-#{$i*5} {
+    margin-left: (0px + $i*5) !important;
+  }
+
+  .p-r-#{$i*5} {
+    padding-right: (0px + $i*5) !important;
+  }
+
+  .m-r-#{$i*5} {
+    margin-right: (0px + $i*5) !important;
+  }
+
+  .p-b-#{$i*5} {
+    padding-bottom: (0px + $i*5) !important;
+  }
+
+  .m-b-#{$i*5} {
+    margin-bottom: (0px + $i*5) !important;
+  }
+}
+
+.f-r {
+  float: right;
+}
+
+.f-l {
+  float: left;
+}
+
+.t-l {
+  text-align: left
+}
+
+.t-r {
+  text-align: right;
+}
+
+.t-c {
+  text-align: center;
+}
+
+.crow-left {
+  >div {
+    float: left;
+  }
+}

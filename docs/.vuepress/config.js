@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 11:45:28
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-02-26 16:53:15
+ * @LastEditTime: 2020-02-26 20:57:38
  * @Description: file content
  */
 const path = require('path')
@@ -37,7 +37,10 @@ module.exports = {
       {
         title: '组件',
         collapsable: true,
-        children: []
+        children: [
+          'views/components/content-form.md'
+
+        ]
       },
     ]
   },
