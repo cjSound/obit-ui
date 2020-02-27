@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 14:03:03
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-02-27 01:50:38
+ * @LastEditTime: 2020-02-27 14:56:31
  * @Description: file content
  -->
 <template>
@@ -14,12 +14,24 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import { SvgIcon } from './index.js'
+import { SvgIcon, ajax } from './index.js'
+console.log('TCL: ajax', ajax)
 console.log('TCL: SvgIcon', SvgIcon)
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  created() {
+    ajax.init({
+      appInit() {
+        console.log('TCL: appInit -> appInit')
+      },
+      getCommonTest() {
+        console.log('TCL: getCommonTest -> getCommonTest')
+      }
+    })
+    console.log(ajax)
   }
 }
 </script>
