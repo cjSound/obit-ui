@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2019-08-01 14:25:13
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-02-27 16:12:54
+ * @LastEditTime: 2020-03-05 00:06:18
  * @Description: file content
  */
 import api from './api/api'
@@ -15,11 +15,12 @@ class obitAjax {
             ...apis
         }
     }
-    init(list) {
+    init(list, router) {
         this.methods = {
             ...this.defultApi,
             ...list
         }
+        this.router = router
     }
 }
 

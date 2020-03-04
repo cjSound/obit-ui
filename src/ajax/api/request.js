@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2019-08-01 14:25:13
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-04 23:26:13
+ * @LastEditTime: 2020-03-05 00:06:37
  * @Description: file content
  */
 import axios from 'axios'
@@ -89,6 +89,9 @@ service.interceptors.response.use(
                 Message({
                     type: "error",
                     message: res.errorMsg
+                })
+                ajax.router.push({
+                    path: '/login'
                 })
                 // router.push({ path: '/login' })
                 Promise.reject()
