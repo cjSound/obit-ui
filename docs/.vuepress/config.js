@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 11:45:28
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-02-27 02:07:44
+ * @LastEditTime: 2020-02-27 16:44:12
  * @Description: file content
  */
 const path = require('path')
@@ -37,6 +37,13 @@ module.exports = {
         children: [
           'views/guide/install.md',
           'views/guide/get-started.md'
+        ]
+      },
+      {
+        title: '基础',
+        collapsable: false,
+        children: [
+          'views/base/ajax.md'
         ]
       },
       {

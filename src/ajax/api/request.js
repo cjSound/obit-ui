@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2019-08-01 14:25:13
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-02-27 15:03:49
+ * @LastEditTime: 2020-03-04 23:26:13
  * @Description: file content
  */
 import axios from 'axios'
@@ -13,7 +13,8 @@ import {
     Message
 } from "element-ui"
 // import router from '@/router'
-import api from './api'
+// import api from './api'
+import ajax from './../index'
 // 创建axios实例
 const service = axios.create({
     // baseURL: URL, // api的base_url
@@ -74,7 +75,7 @@ service.interceptors.response.use(
                         userId: user.userId,
                         refleshToken: user.refleshToken
                     }
-                    api.reflesh(params).then(res => {
+                    ajax.methods.reflesh(params).then(res => {
                         user.accessToken = res.accessToken
                         util.cookie.set('user', user)
                         resolve()
