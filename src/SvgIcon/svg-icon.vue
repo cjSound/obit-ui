@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 14:07:19
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-02-27 00:49:55
+ * @LastEditTime: 2020-03-05 10:07:28
  * @Description: file content
  -->
 <template>
@@ -48,7 +48,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
 .svg-icon {
   width: 1em;
   height: 1em;
