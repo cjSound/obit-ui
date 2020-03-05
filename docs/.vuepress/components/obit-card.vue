@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 16:19:49
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-02-26 23:23:03
+ * @LastEditTime: 2020-03-05 15:02:42
  * @Description: file content
  -->
 <template>
@@ -49,6 +49,7 @@ export default {
   .card-operation {
     height: 40px;
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
   }

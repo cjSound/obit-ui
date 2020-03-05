@@ -1,8 +1,8 @@
 <!--
  * @Author: 曹捷
- * @Date: 2019-08-19 17:00:43
+ * @Date: 2020-03-05 19:57:48
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-02-27 15:40:01
+ * @LastEditTime: 2020-03-05 20:19:28
  * @Description: file content
  -->
 <template>
@@ -15,8 +15,7 @@
 
 <script>
 import { SvgIcon } from './../index.js'
-import ajax from './../ajax/index'
-console.log('TCL: ajax nodata', ajax)
+console.log('SvgIcon', SvgIcon)
 export default {
   name: 'index',
   components: { SvgIcon },

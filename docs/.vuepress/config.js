@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 11:45:28
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-02-27 16:44:12
+ * @LastEditTime: 2020-03-05 20:21:04
  * @Description: file content
  */
 const path = require('path')
@@ -47,15 +47,20 @@ module.exports = {
         ]
       },
       {
-        title: '组件',
+        title: '样式组件',
         collapsable: false,
         children: [
           'views/components/content-form.md',
           'views/components/nodata.md'
-
-
         ]
       },
+      {
+        title: '业务组件',
+        collapsable: false,
+        children: [
+          'views/business/obit-city.md',
+        ]
+      }
     ]
   },
   scss: { //配置 scss 根目录

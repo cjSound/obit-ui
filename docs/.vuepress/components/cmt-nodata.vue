@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 21:52:04
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-02-26 23:58:17
+ * @LastEditTime: 2020-03-05 20:20:30
  * @Description: file content
  -->
 <template>
@@ -10,7 +10,6 @@
     <h3>基础用法</h3>
     <obit-card>
       <nodata></nodata>
-
       <template v-slot:code>
         <pre v-highlightjs><code class="vue">{{code1}}</code></pre>
       </template>
