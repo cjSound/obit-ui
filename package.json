@@ -1,6 +1,6 @@
 {
   "name": "obit-ui",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": false,
   "main": "dist/obit.umd.min.js",
   "description": "an UI framework based on Vue.js",
