@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 16:19:49
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-05 15:02:42
+ * @LastEditTime: 2020-03-06 16:53:50
  * @Description: file content
  -->
 <template>
@@ -15,11 +15,17 @@
         </div>
       </div>
     </div>
-    <div @click="toggle" class="card-operation">{{msg}}</div>
+    <div @click="toggle" class="card-operation" v-if="showCode">{{msg}}</div>
   </div>
 </template>
 <script>
 export default {
+  props: {
+    showCode: {
+      type: Boolean,
+      default: true
+    }
+  },
   data() {
     return {
       codeVisible: true,

@@ -2,11 +2,12 @@
  * @Author: 曹捷
  * @Date: 2020-03-05 20:27:42
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-05 20:34:01
+ * @LastEditTime: 2020-03-06 14:19:07
  * @Description: file content
  */
 import Vue from 'vue'
-import Element from 'element-ui'
+import VueHighlightJS from 'vue-highlightjs'
+// import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 // 使用异步函数也是可以的
 export default ({
@@ -17,5 +18,7 @@ export default ({
     isServer // 当前应用配置是处于 服务端渲染 或 客户端
 }) => {
     // ...做一些其他的应用级别的优化
-    Vue.use(Element)
+    // Vue.use(Element)
+    Vue.use(VueHighlightJS)
+
 }

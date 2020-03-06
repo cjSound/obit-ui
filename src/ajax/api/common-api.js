@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2019-08-01 14:25:13
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-05 16:04:12
+ * @LastEditTime: 2020-03-06 16:16:18
  * @Description: file content
  */
 import api from './api'
@@ -10,7 +10,7 @@ let URL = 'http://rap2.taobao.org:38080/app/mock/228700'
 export default {
     // 根据code查询子字典
     getCommonDictValueList(data) {
-        return api.get(`${URL}manage/codeValue/findByCodeFiled`, data)
+        return api.get(`${URL}/getCommonDictValue`, data)
     },
     // 地区 懒加载
     getCommonDictByParentId(data) {

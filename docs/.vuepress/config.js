@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 11:45:28
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-05 20:21:04
+ * @LastEditTime: 2020-03-06 17:23:37
  * @Description: file content
  */
 const path = require('path')
@@ -43,7 +43,9 @@ module.exports = {
         title: '基础',
         collapsable: false,
         children: [
-          'views/base/ajax.md'
+          'views/base/ajax.md',
+          'views/base/icon.md'
+
         ]
       },
       {
@@ -51,7 +53,8 @@ module.exports = {
         collapsable: false,
         children: [
           'views/components/content-form.md',
-          'views/components/nodata.md'
+          'views/components/nodata.md',
+          'views/components/title-wrap.md',
         ]
       },
       {
@@ -59,6 +62,7 @@ module.exports = {
         collapsable: false,
         children: [
           'views/business/obit-city.md',
+          'views/business/obit-dict.md',
         ]
       }
     ]
