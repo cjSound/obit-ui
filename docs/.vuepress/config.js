@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 11:45:28
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-06 17:23:37
+ * @LastEditTime: 2020-03-10 10:11:21
  * @Description: file content
  */
 const path = require('path')
@@ -63,6 +63,7 @@ module.exports = {
         children: [
           'views/business/obit-city.md',
           'views/business/obit-dict.md',
+          'views/business/obit-upload.md'
         ]
       }
     ]
