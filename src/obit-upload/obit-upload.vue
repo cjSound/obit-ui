@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2019-08-21 15:16:37
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-10 10:14:09
+ * @LastEditTime: 2020-03-11 15:49:55
  * @Description: file content
  -->
 <template>
@@ -149,7 +149,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .avatar-uploader .el-upload {
   border: 1px dashed #d9d9d9;
   border-radius: 6px;
