@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2019-08-21 15:16:37
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-11 15:49:55
+ * @LastEditTime: 2020-03-11 16:05:14
  * @Description: file content
  -->
 <template>
@@ -149,28 +149,30 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.avatar-uploader .el-upload {
-  border: 1px dashed #d9d9d9;
-  border-radius: 6px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-.avatar-uploader .el-upload:hover {
-  border-color: #409eff;
-}
-.avatar-uploader-icon {
-  font-size: 28px;
-  color: #8c939d;
-  width: 300px;
-  height: 200px;
-  line-height: 178px;
-  text-align: center;
-}
-.avatar {
-  width: 300px;
-  height: 200px;
-  display: block;
+<style lang="scss"  >
+.avatar-uploader {
+  .el-upload {
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .el-upload:hover {
+    border-color: #409eff;
+  }
+  .avatar-uploader-icon {
+    font-size: 28px;
+    color: #8c939d;
+    width: 300px;
+    height: 200px;
+    line-height: 178px;
+    text-align: center;
+  }
+  .avatar {
+    width: 300px;
+    height: 200px;
+    display: block;
+  }
 }
 </style>
