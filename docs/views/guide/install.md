@@ -4,7 +4,7 @@ title: '安装'
 #  安装
 
 ```
-npm i -D obit-ui
+npm i -save-dev obit-ui
 ```
 <ClientOnly>
   <obit-gif/>
