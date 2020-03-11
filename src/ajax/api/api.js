@@ -2,16 +2,23 @@
  * @Author: 曹捷
  * @Date: 2019-08-01 14:25:13
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-02-27 14:52:16
+ * @LastEditTime: 2020-03-11 13:07:59
  * @Description: file content
  */
 import request from './request'
+import {
+    Message
+} from "element-ui"
 var instance = function () {
     return {
         disposeData(response) {
             if (response.code === '0000') {
                 return response.data
             } else {
+                Message({
+                    type: "error",
+                    message: response.errorMsg
+                });
                 return Promise.reject()
             }
         },
