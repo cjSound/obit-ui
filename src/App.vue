@@ -15,9 +15,9 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import { SvgIcon, ajax, obitCity } from './index.js'
+import { svgIcon, ajax, obitCity } from './index.js'
 console.log('TCL: ajax', ajax)
-console.log('TCL: SvgIcon', SvgIcon)
+console.log('TCL: SvgIcon', svgIcon)
 export default {
   name: 'App',
   components: {

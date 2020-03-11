@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 14:07:19
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-05 10:07:28
+ * @LastEditTime: 2020-03-11 10:57:01
  * @Description: file content
  -->
 <template>
@@ -16,7 +16,7 @@
 import './../icons/index'
 // import './../icons/svg/nodata.svg'
 export default {
-  name: 'SvgIcon',
+  name: 'svgIcon',
   props: {
     iconClass: {
       type: String,

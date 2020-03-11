@@ -11,14 +11,14 @@ title: '快速上手'
 </template>
 
 <script>
-import { SvgIcon } from 'obit-ui'
+import { svgIcon } from 'obit-ui'
 import 'obit-ui/dist/obit.css'
 
 
 export default {
   name: 'app',
   components: {
-    SvgIcon
+    svgIcon
   }
 }
 </script>

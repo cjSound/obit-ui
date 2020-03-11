@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 11:45:28
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-10 10:11:21
+ * @LastEditTime: 2020-03-11 10:29:25
  * @Description: file content
  */
 const path = require('path')
@@ -55,6 +55,7 @@ module.exports = {
           'views/components/content-form.md',
           'views/components/nodata.md',
           'views/components/title-wrap.md',
+          'views/components/obit-progress.md'
         ]
       },
       {

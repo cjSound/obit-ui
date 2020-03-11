@@ -14,11 +14,10 @@
 </template>
 
 <script>
-import { SvgIcon } from './../index.js'
-console.log('SvgIcon', SvgIcon)
+import { svgIcon } from './../index.js'
 export default {
   name: 'index',
-  components: { SvgIcon },
+  components: { svgIcon },
   props: {
     desText: {
       type: String,

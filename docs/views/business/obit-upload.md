@@ -9,7 +9,7 @@ sidebarDepth: 2
 
 
 <font size=5>代码实现</font>
-```vue
+```Vue
 <template>
   <div class="upload">
     <obitUpload :action="action" :multiple="false" :params="uploadParams" :size="5" :success="success" accept="jpg, png, jpeg">
