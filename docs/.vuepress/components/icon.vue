@@ -2,13 +2,13 @@
  * @Author: 曹捷
  * @Date: 2019-08-06 22:59:38
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-06 17:24:37
+ * @LastEditTime: 2020-03-11 16:28:40
  * @Description: file content
  -->
 <template>
   <ul class="icon-list">
     <li :key="index" v-for="(item,index) in iconList">
-      <svg-icon :icon-class="item.name" class="obit-link" />
+      <svg-icon :icon-class="item.name" @click="choiceIcon(item)" class="obit-link" />
       <br />
       <span>{{item.plug}}</span>
     </li>
@@ -24,7 +24,11 @@ export default {
       iconList: []
     }
   },
-  methods: {},
+  methods: {
+    choiceIcon(item) {
+      console.log('choiceIcon -> item', item)
+    }
+  },
   mounted() {
     const req = require.context('./../../../src/icons/svg', false, /\.svg$/)
     this.iconList = req.keys().map(res => {

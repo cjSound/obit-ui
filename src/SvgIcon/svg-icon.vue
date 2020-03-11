@@ -2,11 +2,11 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 14:07:19
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-11 10:57:01
+ * @LastEditTime: 2020-03-11 16:29:29
  * @Description: file content
  -->
 <template>
-  <svg :class="svgClass" aria-hidden="true">
+  <svg :class="svgClass" @click="svgClick" aria-hidden="true">
     <use :xlink:href="iconName" />
   </svg>
 </template>
@@ -25,6 +25,11 @@ export default {
     className: {
       type: String,
       default: ''
+    }
+  },
+  methods: {
+    svgClick() {
+      this.$emit('click')
     }
   },
   computed: {
