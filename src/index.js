@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 14:54:27
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-11 10:57:46
+ * @LastEditTime: 2020-04-13 20:33:49
  * @Description: file content
  */
 
@@ -15,6 +15,8 @@ import contentForm from './content-form/index.vue'
 import obitProgress from './obit-progress/obit-progress.vue'
 import obitUpload from './obit-upload/obit-upload.vue'
 import titleWrap from './title-wrap/title-wrap.vue'
+import obitTableTree from './obit-table-tree/table-tree'
+
 export {
     svgIcon,
     ajax,
@@ -24,5 +26,6 @@ export {
     contentForm,
     obitProgress,
     obitUpload,
-    titleWrap
+    titleWrap,
+    obitTableTree
 }
