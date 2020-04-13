@@ -25,7 +25,8 @@
 
    ```
 ## Documentation
-Check out our docs at:point_right: [https://cjsound.github.io/obit-ui/](https://cjsound.github.io/obit-ui/).</br>
+Check out our docs at:point_right: [http://cjsound.gitee.io/obit-ui/](http://cjsound.gitee.io/obit-ui/).</br>
+[https://cjsound.github.io/obit-ui/](https://cjsound.github.io/obit-ui/).</br>
 
 
 ## Issue

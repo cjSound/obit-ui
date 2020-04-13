@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 11:45:28
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-11 10:29:25
+ * @LastEditTime: 2020-03-12 11:18:26
  * @Description: file content
  */
 const path = require('path')
@@ -29,6 +29,10 @@ module.exports = {
       {
         text: 'Github',
         link: 'https://github.com/cjSound/obit-ui/'
+      },
+      {
+        text: 'Gitee',
+        link: 'https://gitee.com/cjSound/obit-ui/'
       },
     ],
     sidebar: [{
