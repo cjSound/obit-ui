@@ -52,7 +52,7 @@ export default {
     ...mapGetters(['pageNum', 'childrenNum'])
   },
   created() {
-    console.log('pageNum', this.pageTotal, this.pageNum)
+    // console.log('pageNum', this.pageTotal, this.pageNum)
   },
   props: {
     slotMap: {

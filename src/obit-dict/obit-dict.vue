@@ -2,11 +2,11 @@
  * @Author: 曹捷
  * @Date: 2019-08-22 15:24:21
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-06 16:19:15
+ * @LastEditTime: 2020-04-14 15:22:29
  * @Description: 字典组件
  -->
 <template>
-  <el-select :placeholder="placeholder" @change="changeDict" class="input-md" clearable v-if="dictValueList.length>0" v-model="dictValue">
+  <el-select :disabled="disabled"  :placeholder="placeholder" @change="changeDict" class="input-md" clearable v-if="dictValueList.length>0" v-model="dictValue">
     <el-option :key="item.codeValue" :label="item[labelName]" :value="item[valueName]" v-for="item in dictValueList"></el-option>
   </el-select>
 </template>
@@ -21,6 +21,14 @@ export default {
     ElOption: Option
   },
   props: {
+    disabled:{
+      type:Boolean,
+      default:false
+    },
+    readOnly:{
+      type:Boolean,
+      default:false
+    },
     value: {
       type: [Number, String]
     },
@@ -39,7 +47,8 @@ export default {
     valueName: {
       type: String,
       default: 'codeValue'
-    }
+    },
+    
   },
   data() {
     return {

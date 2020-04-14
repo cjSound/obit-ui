@@ -71,6 +71,7 @@ http://rap2.taobao.org:38080/app/mock/228700/getCommonDictValue?codeField=health
 | placeholder | 默认提示 | String |- | 请选择 | - |
 | labelName | 返回数据展示中文 Key | String |- | valueDesc | - |
 | valueName | 返回数据value Key | String |- | codeValue | - |
+| disabled | 是否禁用 | Boolean |- | false | - |
 
 <ClientOnly>
   <obit-gif/>
