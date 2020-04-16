@@ -1,5 +1,5 @@
 ---
-title: '空数据提示'
+title: 'nodata 空数据提示'
 sidebarDepth: 2
 ---
 ## Nodata

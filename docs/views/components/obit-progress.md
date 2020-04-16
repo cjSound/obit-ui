@@ -1,5 +1,5 @@
 ---
-title: '进度条'
+title: 'obitProgress进度条'
 sidebarDepth: 2
 ---
 ## obit-progress进度条
@@ -15,7 +15,7 @@ sidebarDepth: 2
  * @Author: 曹捷
  * @Date: 2020-03-11 10:25:24
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-11 10:51:50
+ * @LastEditTime: 2020-04-16 16:28:35
  * @Description: 渐变百分比进度条
  -->
 <template>

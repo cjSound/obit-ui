@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2020-02-26 14:54:27
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-04-13 20:33:49
+ * @LastEditTime: 2020-04-16 16:17:15
  * @Description: file content
  */
 
@@ -16,7 +16,8 @@ import obitProgress from './obit-progress/obit-progress.vue'
 import obitUpload from './obit-upload/obit-upload.vue'
 import titleWrap from './title-wrap/title-wrap.vue'
 import obitTableTree from './obit-table-tree/table-tree'
-
+import obitOrg from  './obit-org/obit-org'
+import obitCascader from  './obit-cascader/obit-cascader'
 export {
     svgIcon,
     ajax,
@@ -27,5 +28,7 @@ export {
     obitProgress,
     obitUpload,
     titleWrap,
-    obitTableTree
+    obitTableTree,
+    obitOrg,
+    obitCascader
 }

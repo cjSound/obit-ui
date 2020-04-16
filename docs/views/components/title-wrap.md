@@ -1,5 +1,5 @@
 ---
-title: '详情标签返回'
+title: 'titleWrap详情标签返回'
 sidebarDepth: 2
 ---
 ## title-wrap
@@ -14,7 +14,7 @@ sidebarDepth: 2
  * @Author: 曹捷
  * @Date: 2020-03-06 16:44:45
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-06 17:07:03
+ * @LastEditTime: 2020-04-16 16:28:46
  * @Description: 标题或者详情标题标签
  -->
 <template>

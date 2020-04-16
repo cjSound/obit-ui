@@ -1,5 +1,5 @@
 ---
-title: '文件上传'
+title: 'obitUpload 文件上传'
 sidebarDepth: 2
 ---
 ##  文件上传 obit-upload

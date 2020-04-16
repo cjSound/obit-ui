@@ -1,5 +1,5 @@
 ---
-title: '字典组件'
+title: 'obitCity 字典组件'
 sidebarDepth: 2
 ---
 ##  字典组件 obit-city
