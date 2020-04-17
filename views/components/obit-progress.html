@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>obitProgress进度条 | Onebit</title>
+    <meta name="description" content="易比特前端组件库">
+    <link rel="icon" href="/obit-ui/favicon.ico">
+    
+    <link rel="preload" href="/obit-ui/assets/css/styles.ee4e8097.css" as="style"><link rel="preload" href="/obit-ui/assets/js/app.ee4e8097.js" as="script"><link rel="preload" href="/obit-ui/assets/js/37.ba81ffcb.js" as="script"><link rel="prefetch" href="/obit-ui/assets/css/0.styles.365c949b.css"><link rel="prefetch" href="/obit-ui/assets/css/10.styles.329ac878.css"><link rel="prefetch" href="/obit-ui/assets/css/11.styles.bb326b66.css"><link rel="prefetch" href="/obit-ui/assets/css/12.styles.6870430d.css"><link rel="prefetch" href="/obit-ui/assets/css/13.styles.efff5a8b.css"><link rel="prefetch" href="/obit-ui/assets/css/14.styles.8b808667.css"><link rel="prefetch" href="/obit-ui/assets/css/15.styles.bb9bbd0c.css"><link rel="prefetch" href="/obit-ui/assets/css/16.styles.18f67cff.css"><link rel="prefetch" href="/obit-ui/assets/css/17.styles.a5876829.css"><link rel="prefetch" href="/obit-ui/assets/css/18.styles.df191ce1.css"><link rel="prefetch" href="/obit-ui/assets/css/19.styles.59cf572c.css"><link rel="prefetch" href="/obit-ui/assets/css/2.styles.12a3f0a0.css"><link rel="prefetch" href="/obit-ui/assets/css/20.styles.9e23b705.css"><link rel="prefetch" href="/obit-ui/assets/css/22.styles.f7a184c5.css"><link rel="prefetch" href="/obit-ui/assets/css/25.styles.c8c03e40.css"><link rel="prefetch" href="/obit-ui/assets/css/3.styles.f9fcd5ab.css"><link rel="prefetch" href="/obit-ui/assets/css/4.styles.d56120f5.css"><link rel="prefetch" href="/obit-ui/assets/css/8.styles.6a4ecdce.css"><link rel="prefetch" href="/obit-ui/assets/css/9.styles.fc8cc5fd.css"><link rel="prefetch" href="/obit-ui/assets/js/0.365c949b.js"><link rel="prefetch" href="/obit-ui/assets/js/1.2a67fb8b.js"><link rel="prefetch" href="/obit-ui/assets/js/10.329ac878.js"><link rel="prefetch" href="/obit-ui/assets/js/11.bb326b66.js"><link rel="prefetch" href="/obit-ui/assets/js/12.6870430d.js"><link rel="prefetch" href="/obit-ui/assets/js/13.efff5a8b.js"><link rel="prefetch" href="/obit-ui/assets/js/14.8b808667.js"><link rel="prefetch" href="/obit-ui/assets/js/15.bb9bbd0c.js"><link rel="prefetch" href="/obit-ui/assets/js/16.18f67cff.js"><link rel="prefetch" href="/obit-ui/assets/js/17.a5876829.js"><link rel="prefetch" href="/obit-ui/assets/js/18.df191ce1.js"><link rel="prefetch" href="/obit-ui/assets/js/19.59cf572c.js"><link rel="prefetch" href="/obit-ui/assets/js/2.12a3f0a0.js"><link rel="prefetch" href="/obit-ui/assets/js/20.9e23b705.js"><link rel="prefetch" href="/obit-ui/assets/js/21.f2dfd2a6.js"><link rel="prefetch" href="/obit-ui/assets/js/22.f7a184c5.js"><link rel="prefetch" href="/obit-ui/assets/js/23.a24e054f.js"><link rel="prefetch" href="/obit-ui/assets/js/24.03dae942.js"><link rel="prefetch" href="/obit-ui/assets/js/25.c8c03e40.js"><link rel="prefetch" href="/obit-ui/assets/js/26.e83e03fd.js"><link rel="prefetch" href="/obit-ui/assets/js/27.ec09781b.js"><link rel="prefetch" href="/obit-ui/assets/js/28.0d3cf175.js"><link rel="prefetch" href="/obit-ui/assets/js/29.56d8af3a.js"><link rel="prefetch" href="/obit-ui/assets/js/3.f9fcd5ab.js"><link rel="prefetch" href="/obit-ui/assets/js/30.43958e5d.js"><link rel="prefetch" href="/obit-ui/assets/js/31.58c6bfb6.js"><link rel="prefetch" href="/obit-ui/assets/js/32.f8e793b3.js"><link rel="prefetch" href="/obit-ui/assets/js/33.6ffe7ef6.js"><link rel="prefetch" href="/obit-ui/assets/js/34.641c163d.js"><link rel="prefetch" href="/obit-ui/assets/js/35.561a6087.js"><link rel="prefetch" href="/obit-ui/assets/js/36.6e32bdd8.js"><link rel="prefetch" href="/obit-ui/assets/js/38.d80565c0.js"><link rel="prefetch" href="/obit-ui/assets/js/39.9c4e20ed.js"><link rel="prefetch" href="/obit-ui/assets/js/4.d56120f5.js"><link rel="prefetch" href="/obit-ui/assets/js/40.20dbd24c.js"><link rel="prefetch" href="/obit-ui/assets/js/5.e4162956.js"><link rel="prefetch" href="/obit-ui/assets/js/6.3531c51f.js"><link rel="prefetch" href="/obit-ui/assets/js/8.6a4ecdce.js"><link rel="prefetch" href="/obit-ui/assets/js/9.fc8cc5fd.js">
+    <link rel="stylesheet" href="/obit-ui/assets/css/styles.ee4e8097.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/obit-ui/" class="home-link router-link-active"><img src="/obit-ui/favicon.ico" alt="Onebit" class="logo"> <span class="site-name can-hide">Onebit</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/obit-ui/" class="nav-link">Home</a></div><div class="nav-item"><a href="https://github.com/cjSound/obit-ui/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://gitee.com/cjSound/obit-ui/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/obit-ui/" class="nav-link">Home</a></div><div class="nav-item"><a href="https://github.com/cjSound/obit-ui/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://gitee.com/cjSound/obit-ui/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading"><span>开发指南</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/obit-ui/views/guide/install.html" class="sidebar-link">安装</a></li><li><a href="/obit-ui/views/guide/get-started.html" class="sidebar-link">快速上手</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>基础</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/obit-ui/views/base/ajax.html" class="sidebar-link">ajax通讯</a></li><li><a href="/obit-ui/views/base/icon.html" class="sidebar-link">图标库</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading open"><span>样式组件</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/obit-ui/views/components/content-form.html" class="sidebar-link">contentForm主体内容框</a></li><li><a href="/obit-ui/views/components/nodata.html" class="sidebar-link">nodata 空数据提示</a></li><li><a href="/obit-ui/views/components/title-wrap.html" class="sidebar-link">titleWrap详情标签返回</a></li><li><a href="/obit-ui/views/components/obit-progress.html" class="active sidebar-link">obitProgress进度条</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/obit-ui/views/components/obit-progress.html#obit-progress进度条" class="sidebar-link">obit-progress进度条</a></li><li class="sidebar-sub-header"><a href="/obit-ui/views/components/obit-progress.html#参数说明" class="sidebar-link">参数说明</a></li></ul></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>业务组件</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/obit-ui/views/business/obit-city.html" class="sidebar-link">obitCity 省市区多级联动</a></li><li><a href="/obit-ui/views/business/obit-dict.html" class="sidebar-link">obitCity 字典组件</a></li><li><a href="/obit-ui/views/business/obit-upload.html" class="sidebar-link">obitUpload 文件上传</a></li><li><a href="/obit-ui/views/business/obit-table-tree.html" class="sidebar-link">obitTableTree 表格树</a></li><li><a href="/obit-ui/views/business/obit-cascader.html" class="sidebar-link">obitCascader 下拉联动</a></li><li><a href="/obit-ui/views/business/obit-org.html" class="sidebar-link">obitOrg 组织机构</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h2 id="obit-progress进度条"><a href="#obit-progress进度条" class="header-anchor">#</a> obit-progress进度条</h2> <!----> <p><font size="5">代码实现</font></p> <div class="language-Vue extra-class"><pre class="language-vue"><code><span class="token comment">&lt;!--
+ * @Author: 曹捷
+ * @Date: 2020-03-11 10:25:24
+ * @LastEditors: 曹捷
+ * @LastEditTime: 2020-04-16 16:28:35
+ * @Description: 渐变百分比进度条
+ --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>module-info full scrollBar<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>index<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>info-item<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>(item,index) in dataList<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>title<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{item.name}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>obit-progress</span> <span class="token attr-name">:format</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>formatProgress(item)<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:percentage</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>item.percentage<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:stroke-width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>18<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>module-progress<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>obit-progress</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> obitProgress <span class="token keyword">from</span> <span class="token string">'./../../../src/obit-progress/obit-progress'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span> obitProgress <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      dataList<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">'服务手册'</span><span class="token punctuation">,</span>
+          value<span class="token operator">:</span> <span class="token number">888</span><span class="token punctuation">,</span>
+          trend<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+          percentage<span class="token operator">:</span> <span class="token number">20</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">'新闻资讯'</span><span class="token punctuation">,</span>
+          value<span class="token operator">:</span> <span class="token number">22888</span><span class="token punctuation">,</span>
+          trend<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          percentage<span class="token operator">:</span> <span class="token number">80</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">'问卷调查'</span><span class="token punctuation">,</span>
+          value<span class="token operator">:</span> <span class="token number">15888</span><span class="token punctuation">,</span>
+          trend<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+          percentage<span class="token operator">:</span> <span class="token number">60</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">'生命体征'</span><span class="token punctuation">,</span>
+          value<span class="token operator">:</span> <span class="token number">22888</span><span class="token punctuation">,</span>
+          trend<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          percentage<span class="token operator">:</span> <span class="token number">80</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">'活动影像'</span><span class="token punctuation">,</span>
+          value<span class="token operator">:</span> <span class="token number">18888</span><span class="token punctuation">,</span>
+          trend<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          percentage<span class="token operator">:</span> <span class="token number">70</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">'网络课堂'</span><span class="token punctuation">,</span>
+          value<span class="token operator">:</span> <span class="token number">21888</span><span class="token punctuation">,</span>
+          trend<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          percentage<span class="token operator">:</span> <span class="token number">90</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">'军休文化'</span><span class="token punctuation">,</span>
+          value<span class="token operator">:</span> <span class="token number">25388</span><span class="token punctuation">,</span>
+          trend<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          percentage<span class="token operator">:</span> <span class="token number">100</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">formatProgress</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;span class=&quot;progress-text&quot;&gt;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>item<span class="token punctuation">.</span>value<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> &lt;span&gt;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>
+        item<span class="token punctuation">.</span>trend <span class="token operator">===</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token string">'↑'</span> <span class="token operator">:</span> <span class="token string">'↓'</span>
+      <span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/span&gt;&lt;/span&gt;</span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>scss<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">.module-info</span> <span class="token punctuation">{</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> auto<span class="token selector">;
+  .info-item</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 14%<span class="token punctuation">;</span>
+    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token selector">;
+    .module-progress</span> <span class="token punctuation">{</span>
+      <span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.el-progress-bar</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-right</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>
+    <span class="token property">padding-right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 83%<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.el-progress-bar__inner</span> <span class="token punctuation">{</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>160deg<span class="token punctuation">,</span> #ffeb5c 10%<span class="token punctuation">,</span> #fc4e1d 90%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.progress-text</span> <span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token selector">;
+    span</span> <span class="token punctuation">{</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+      <span class="token property">right</span><span class="token punctuation">:</span> -8px<span class="token punctuation">;</span>
+      <span class="token property">top</span><span class="token punctuation">:</span> -1px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token selector">.el-progress__text</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #fc4e1d<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 16px <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.title</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #fc4e1d<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 0 10px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.el-progress-bar__outer</span> <span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="参数说明"><a href="#参数说明" class="header-anchor">#</a> 参数说明</h2> <table><thead><tr><th style="text-align:left">参数</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th>默认值</th> <th>是否必填</th></tr></thead> <tbody><tr><td style="text-align:left">type</td> <td>进度条类型</td> <td>String</td> <td>'line'线形 'circle'圆形 'dashboard 半圆形</td> <td>-</td> <td>-</td></tr> <tr><td style="text-align:left">percentage</td> <td>进度占比 最高100</td> <td>Number</td> <td>-</td> <td>0</td> <td>true</td></tr> <tr><td style="text-align:left">status</td> <td>是否在进度条后面展示状态图标 对应三个</td> <td>String</td> <td>'success', 'exception', 'warning'</td> <td>-</td> <td>-</td></tr> <tr><td style="text-align:left">strokeWidth</td> <td>进度条高度亦或者宽度</td> <td>Number</td> <td>-</td> <td>6</td> <td>-</td></tr> <tr><td style="text-align:left">textInside</td> <td>文字是否展示在进度条之内</td> <td>Boolean</td> <td>-</td> <td>false</td> <td>-</td></tr> <tr><td style="text-align:left">width</td> <td>宽度</td> <td>Number</td> <td>-</td> <td>126</td> <td>-</td></tr> <tr><td style="text-align:left">showText</td> <td>是否展示文字</td> <td>Boolean</td> <td>-</td> <td>true</td> <td>-</td></tr> <tr><td style="text-align:left">color</td> <td>状态显示颜色</td> <td>String, Array, Function</td> <td>-</td> <td>-</td> <td>-</td></tr> <tr><td style="text-align:left">format</td> <td>状态条文字 自定义</td> <td>Function, String</td> <td>-</td> <td>-</td> <td>-</td></tr></tbody></table> <!----></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/obit-ui/views/components/title-wrap.html" class="prev">
+          titleWrap详情标签返回
+        </a></span> <span class="next"><a href="/obit-ui/views/business/obit-city.html">
+          obitCity 省市区多级联动
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/obit-ui/assets/js/app.ee4e8097.js" defer></script><script src="/obit-ui/assets/js/37.ba81ffcb.js" defer></script>
+  </body>
+</html>
