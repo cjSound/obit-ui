@@ -1,24 +1,29 @@
 <template>
-  <div class="table-tree">
-    <div class="tab-row table-tree-header" v-if="widthArray.length>0">
-      <div :style="{'width':widthArray[0]+'%'}" class="row-item">{{title}}</div>
-      <div :key="index" :style="{'width':widthArray[index+1]+'%'}" class="row-item" v-for="(item,index) in titleArray">{{item}}</div>
+  <div style="position: relative;">
+    <div class="table-tree-main" ref="table-tree-main">
+      <div :style="{width:shadowWidth}" class="box-shadow-right" v-if="shadowWidth"></div>
+      <div :class="{'table-tree-fixed-right':widthMax}" :style="{width:widthMax+'px'}" class="table-tree">
+        <div class="tab-row table-tree-header" v-if="widthArray.length>0">
+          <div :style="{'width':widthArray[0]}" class="row-item">{{title}}</div>
+          <div :key="index" :style="{'width':widthArray[index+1]}" class="row-item" v-for="(item,index) in titleArray">{{item}}</div>
+        </div>
+        <table-body
+          :dataList="dataList"
+          :id="id"
+          :keys="keys"
+          :keytokin="keytokin"
+          :left="left"
+          :pageTotal="dataList.length"
+          :parentKey="parentKey"
+          :pid="rootKey"
+          :slotMap="$scopedSlots"
+          :step="left"
+          :width-array="widthArray"
+          class="tabody"
+          v-if="open"
+        ></table-body>
+      </div>
     </div>
-    <table-body
-      :dataList="dataList"
-      :id="id"
-      :keys="keys"
-      :keytokin="keytokin"
-      :left="left"
-      :pageTotal="dataList.length"
-      :parentKey="parentKey"
-      :pid="rootKey"
-      :slotMap="$scopedSlots"
-      :step="left"
-      :width-array="widthArray"
-      class="tabody"
-      v-if="open"
-    ></table-body>
   </div>
 </template>
 
@@ -89,6 +94,10 @@ export default {
       type: String,
       default: ''
     },
+    // 设置表格内容宽度，有几列就要有多少个对应的数据，默认是均等划分
+    // 内容可以是数字，数字则按照百分比显示宽度
+    // 内容可以是PX，若当前总PX宽度溢出表格实际宽度，则显示溢出设置的固定宽度
+    // 若设置的固定宽度小于实际表格宽度，则按照对应设置的固定px实现百分比划分
     widths: {
       type: Array,
       default: function() {
@@ -112,7 +121,9 @@ export default {
       titleArray: [],
       open: false,
       keytokin: '',
-      keys: []
+      keys: [],
+      widthMax: '', //只有固定px时，内容溢出,才显示溢出的宽度，否则都是按照固定比例
+      shadowWidth: '' //只有固定px时，内容溢出，超出总table范围 ，显示右侧阴影宽度
     }
   },
   methods: {
@@ -137,10 +148,34 @@ export default {
       if (this.widths.length == 0) {
         var num = this.titleArray.length + 1
         for (var i = 0; i < num; i++) {
-          this.widthArray.push(100 / num)
+          this.widthArray.push(100 / num + '%')
         }
       } else {
-        this.widthArray = this.widths
+        // 当内容超出100%  采用固定px方式
+        let arr = this.widths.concat([])
+        // 直接是按照固定比例模式
+        arr.forEach((element, index) => {
+          arr[index] = typeof element === 'number' ? element + '%' : element
+        })
+        // 设置了固定的值
+        if (arr[0].indexOf('px') !== -1) {
+          let width = 0
+          arr.forEach(element => {
+            width += parseInt(element.replace('px', ''))
+          })
+          // 设置的宽度溢出 实际宽度 按照溢出的宽度设置
+          if (width > this.$refs['table-tree-main'].offsetWidth) {
+            this.shadowWidth = arr[arr.length - 1]
+            this.widthMax = width
+          } else {
+            // 没有溢出 还是按照固定比例计算
+            arr.forEach((element, index) => {
+              arr[index] =
+                (parseInt(element.replace('px', '')) * 100) / width + '%'
+            })
+          }
+        }
+        this.widthArray = arr
       }
       this.initConfig()
     })
@@ -158,6 +193,30 @@ export default {
   overflow: hidden;
   cursor: pointer;
 }
+.table-tree-main {
+  overflow: auto;
+}
+.box-shadow-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+}
+.table-tree-fixed-right {
+  .tab-row {
+    .row-item:nth-last-child(2) {
+      border-right: 0;
+    }
+    .row-item:last-child {
+      position: absolute;
+      border-left: 1px solid #ebeef5;
+      right: 0;
+      z-index: 2;
+    }
+  }
+}
 .table-tree {
   table {
     width: 100%;
@@ -166,9 +225,11 @@ export default {
     background: #f5f7fa;
     overflow: hidden;
     width: 100%;
+    white-space: nowrap;
     .row-item {
-      float: left;
       height: 47px;
+      display: inline-block;
+      overflow: hidden;
     }
   }
   .ishidden {
@@ -190,6 +251,7 @@ export default {
       text-align: center;
       border-bottom: 1px solid #ebeef5;
       border-right: 1px solid #ebeef5;
+      background: #f5f7fa;
       border-top: 1px solid #ebeef5;
     }
     th:first-child {
@@ -216,6 +278,9 @@ export default {
     }
     .last-child {
       background: #ffffff;
+      .row-item {
+        background: #ffffff;
+      }
     }
     .row-item:first-child {
       border-left: 1px solid #ebeef5;

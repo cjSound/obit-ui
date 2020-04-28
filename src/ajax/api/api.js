@@ -2,7 +2,7 @@
  * @Author: 曹捷
  * @Date: 2019-08-01 14:25:13
  * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-11 13:07:59
+ * @LastEditTime: 2020-04-28 15:44:21
  * @Description: file content
  */
 import request from './request'
@@ -22,21 +22,20 @@ var instance = function () {
                 return Promise.reject()
             }
         },
-        async get(url, data = {}) {
-            const response = await request({
-                url: url,
-                method: 'get',
-                params: data
-            })
-            return this.disposeData(response)
+        get(url, data = {}) {
+            return this.toRequestParams(url, data, { method: 'get' })
         },
-        async post(url, data = {}) {
-            const response = await request({
-                url: url,
-                method: 'post',
-                data: data
-            })
-            return this.disposeData(response)
+        post(url, data = {}) {
+            return this.toRequest(url, data, { method: 'post' })
+        },
+        put(url, data = {}) {
+            return this.toRequest(url, data, { method: 'put' })
+        },
+        delete(url, data = {}) {
+            return this.toRequestParams(url, data, { method: 'delete' })
+        },
+        upload(url, data = {}) {
+            return this.toRequest(url, data, { method: 'post', isFile: true })
         },
         async tablePost(url, data = {}) {
             const response = await request({
@@ -46,12 +45,21 @@ var instance = function () {
             })
             return response
         },
-        async upload(url, data = {}) {
+        // 适用于 post put  body传参
+        async toRequest(url, data = {}, info = {}) {
             const response = await request({
                 url: url,
-                method: 'post',
-                isFile: true,
-                data: data
+                data: data,
+                ...info
+            })
+            return this.disposeData(response)
+        },
+        // 适用于 get  delete  ?号拼接
+        async toRequestParams(url, data = {}, info = {}) {
+            const response = await request({
+                url: url,
+                params: data,
+                ...info
             })
             return this.disposeData(response)
         },
