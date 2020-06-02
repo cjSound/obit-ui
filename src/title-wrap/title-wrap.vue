@@ -1,8 +1,8 @@
 <!--
  * @Author: 曹捷
  * @Date: 2019-08-19 10:52:38
- * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-06 17:01:20
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-05-27 17:45:58
  * @Description: file content
  -->
 <template>
@@ -104,6 +104,8 @@ export default {
       position: relative;
       top: 7px;
       padding-left: 15px;
+      padding-top: 5px;
+      padding-bottom: 15px;
       span:nth-child(1) {
         margin-right: 10px;
       }

@@ -1,34 +1,48 @@
 <!--
  * @Author: 曹捷
  * @Date: 2019-08-21 15:16:37
- * @LastEditors: 曹捷
- * @LastEditTime: 2020-03-11 16:05:14
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-05-27 17:46:38
  * @Description: file content
  -->
 <template>
-  <el-upload
-    :accept="accept"
-    :action="action"
-    :auto-upload="autoUpload"
-    :before-upload="beforeUpload"
-    :drag="drag"
-    :http-request="customUpload"
-    :limit="limit"
-    :multiple="multiple"
-    :on-change="onChange"
-    :on-exceed="onExceed"
-    :on-success="success"
-    :show-file-list="false"
-    class="avatar-uploader"
-    ref="upload"
-  >
-    <slot></slot>
-  </el-upload>
+  <span>
+    <el-upload
+      :accept="accept"
+      :action="action"
+      :auto-upload="autoUpload"
+      :before-upload="beforeUpload"
+      :drag="drag"
+      :http-request="customUpload"
+      :limit="limit"
+      :list-type="listType"
+      :multiple="multiple"
+      :on-change="onChange"
+      :on-exceed="onExceed"
+      :on-remove="onRemove"
+      :on-success="success"
+      :show-file-list="showFileList"
+      class="avatar-uploader"
+      ref="upload"
+    >
+      <slot></slot>
+      <span slot="file" slot-scope="{file}" v-if="listType !==''">
+        <img :src="file.url" alt class="el-upload-list__item-thumbnail" />
+        <span class="el-upload-list__item-actions">
+          <span @click="handlePictureCardPreview(file)" class="el-upload-list__item-preview">
+            <i class="el-icon-zoom-in"></i>
+          </span>
+        </span>
+      </span>
+    </el-upload>
+    <el-dialog :visible.sync="dialogVisible" append-to-body v-if="listType !==''">
+      <img :src="dialogImageUrl" alt width="100%" />
+    </el-dialog>
+  </span>
 </template>
 
 <script>
 import { Upload, Loading } from 'element-ui'
-import ajax from './../ajax/index.js'
 
 export default {
   components: {
@@ -73,21 +87,34 @@ export default {
     autoUpload: {
       type: Boolean,
       default: true
+    },
+    showFileList: {
+      type: Boolean,
+      default: false
+    },
+    listType: {
+      type: String,
+      default: ''
     }
   },
   data() {
     return {
       uploadNum: 0,
       uploadSuccessNum: 0,
-      loading: ''
+      loading: '',
+      dialogVisible: false,
+      dialogImageUrl: ''
     }
   },
   methods: {
     submit() {
       this.$refs.upload.submit()
     },
+    handlePictureCardPreview(file) {
+      this.dialogImageUrl = file.url
+      this.dialogVisible = true
+    },
     onExceed() {
-      console.log(arguments)
       this.$message.error(`上传数量一次不能超过${this.limit}个`)
     },
     beforeUpload(file) {
@@ -112,7 +139,7 @@ export default {
       let param = new FormData()
       param.append('file', fileobj.file)
       //上传压缩裁剪
-      let defult = Object.assign({ uploadType: 2 }, this.params)
+      let defult = Object.assign({}, this.params)
       for (var i in defult) {
         param.append(i, defult[i])
       }
@@ -123,11 +150,11 @@ export default {
         spinner: 'el-icon-loading',
         background: 'rgba(0, 0, 0, 0.7)'
       })
-      ajax.api
+      this.$http
         .upload(this.action, param)
         .then(res => {
           this.endLoading()
-          this.success && this.success(res)
+          this.success && this.success(res, this.params)
         })
         .catch(() => {
           this.endLoading()
@@ -136,9 +163,12 @@ export default {
     endLoading() {
       this.uploadSuccessNum++
       if (this.uploadNum === this.uploadSuccessNum) {
-        this.$refs.upload.clearFiles()
+        // this.$refs.upload.clearFiles()
         this.loading.close()
       }
+    },
+    onRemove(file, fileList) {
+      this.$emit('onRemove', file, fileList)
     },
     onChange(fileobj) {
       if (!this.autoUpload) {
@@ -152,7 +182,7 @@ export default {
 <style lang="scss"  >
 .avatar-uploader {
   .el-upload {
-    border: 1px dashed #d9d9d9;
+    // border: 1px dashed #d9d9d9;
     border-radius: 6px;
     cursor: pointer;
     position: relative;
@@ -168,6 +198,9 @@ export default {
     height: 200px;
     line-height: 178px;
     text-align: center;
+  }
+  .el-upload-list__item:hover .el-icon-close {
+    display: none;
   }
   .avatar {
     width: 300px;
